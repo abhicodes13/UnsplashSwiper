@@ -19,7 +19,7 @@ export default function SwipePicture() {
   useEffect(() => {
     const unsplashAccessKey = 'A5L9KcgzR9Vnv8gZbFPZ52Iwk5tx8f8mPFTPbGG1Ur8';
 
-    axios.get(`https://api.unsplash.com/photos?client_id=${unsplashAccessKey}`)
+    axios.get(`https://api.unsplash.com/photos?client_id=${unsplashAccessKey}&per_page=20`)
       .then(response => {
         setPhotos(response.data);
       })
